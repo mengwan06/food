@@ -4,119 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>小厨房</title>
+
   <style>
-    :root{
-      --bg: #e6e5d5;
-      --card: #994d47;
-      --chip: #fff1e6;
-      --item: #f3f2e6;
-      --text: #1f1f1f;
-      --muted: #555;
-    }
-
-    *{ box-sizing: border-box; }
-
-    body{
+    body {
       margin: 0;
       min-height: 100vh;
+      background: #e6e5d5;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      color: #333;
     }
 
-    .container{
+    .container {
       max-width: 980px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    header{
+    h1 {
       text-align: center;
-      margin-bottom: 22px;
-    }
-
-    h1{
-      margin: 0 0 8px;
+      margin-bottom: 6px;
       font-size: 36px;
-      letter-spacing: 0.5px;
     }
 
-    .subtitle{
-      margin: 0;
-      color: var(--muted);
+    .subtitle {
+      text-align: center;
       font-size: 14px;
+      color: #555;
+      margin-bottom: 30px;
     }
 
-    .card{
-      background: var(--card);
+    .card {
+      background: #994d47;
       border-radius: 16px;
       padding: 26px;
       box-shadow: 0 14px 22px rgba(0,0,0,0.12);
-      margin: 18px 0;
-      color: #fff;
+      margin-bottom: 24px;
     }
 
-    .card-title{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--chip);
-      color: #3a2a2a;
-      padding: 6px 14px;
+    .section-title {
+      display: inline-block;
+      background: #fff1e6;
+      padding: 6px 16px;
       border-radius: 999px;
       font-size: 15px;
       font-weight: 600;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
-    .grid{
+    .grid {
       display: grid;
-      grid-template-columns: repeat( auto-fit, minmax(160px, 1fr) );
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 16px;
     }
 
-    .item{
-      background: var(--item);
+    .item {
+      background: #f3f2e6;
       border-radius: 16px;
       padding: 14px;
-      color: #2b2b2b;
       text-align: center;
     }
 
-    /* 图片占位块：你可以换成 img */
-    .thumb{
+    .item img {
       width: 100%;
-      aspect-ratio: 4 / 3;
       border-radius: 12px;
-      background: rgba(153, 77, 71, 0.18);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
       margin-bottom: 10px;
-      user-select: none;
     }
 
-    .name{
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .price{
+    .name {
       font-weight: 600;
-      opacity: 0.9;
+      margin-bottom: 4px;
     }
 
-    .contact{
-      margin-top: 16px;
+    .price {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .contact {
+      margin-top: 18px;
       text-align: center;
     }
 
-    .contact span{
-      display: inline-block;
-      background: var(--chip);
-      color: #3a2a2a;
-      padding: 7px 14px;
+    .contact span {
+      background: #fff1e6;
+      padding: 6px 16px;
       border-radius: 999px;
       font-size: 14px;
       font-weight: 600;
@@ -125,61 +96,86 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <h1>小厨房 · 今日份幸福 🍲</h1>
-      <p class="subtitle">tous les jours · 每天都有新鲜出炉的小快乐</p>
-    </header>
 
-    <section class="card">
-      <div class="card-title">🍽 今日菜单</div>
+  <div class="container">
+    <h1>小厨房 · 今日份幸福</h1>
+
+    <!-- 菜单 -->
+    <div class="card">
+      <div class="section-title">今日菜单</div>
+
       <div class="grid">
         <div class="item">
-          <div class="thumb">🍖</div>
+          <img src="img/valo.png">
+          <div class="name">红烧肉</div>
+          <div class="price">$40</div>
+        </div>
+
+        <div class="grid">
+        <div class="item">
+          <img src="img/valo.png">
+          <div class="name">红烧肉</div>
+          <div class="price">$40</div>
+        </div>
+
+        <div class="grid">
+        <div class="item">
+          <img src="img/valo.png">
+          <div class="name">红烧肉</div>
+          <div class="price">$40</div>
+        </div>
+
+        <div class="grid">
+        <div class="item">
+          <img src="img/valo.png">
           <div class="name">红烧肉</div>
           <div class="price">$40</div>
         </div>
 
         <div class="item">
-          <div class="thumb">🍰</div>
+          <img src="img/valo.png">
           <div class="name">小蛋糕</div>
           <div class="price">$40</div>
         </div>
 
         <div class="item">
-          <div class="thumb">🥟</div>
+          <img src="img/valo.png">
           <div class="name">饺子</div>
           <div class="price">$28</div>
         </div>
 
         <div class="item">
-          <div class="thumb">🍛</div>
+          <img src="img/valo.png">
           <div class="name">咖喱饭</div>
           <div class="price">$35</div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="card">
-      <div class="card-title">🥤 今日饮品</div>
+    <!-- 饮品 -->
+    <div class="card">
+      <div class="section-title">今日饮品</div>
+
       <div class="grid">
         <div class="item">
-          <div class="thumb">🧋</div>
+          <img src="img/valo.png">
           <div class="name">奶茶</div>
           <div class="price">$13</div>
         </div>
 
         <div class="item">
-          <div class="thumb">🫘</div>
+          <img src="img/valo.png">
           <div class="name">红豆奶茶</div>
           <div class="price">$20</div>
         </div>
       </div>
 
       <div class="contact">
-        <span>📞 联系：微信 / 电话</span>
+        <span>联系：微信 / 电话</span>
       </div>
-    </section>
+    </div>
+
   </div>
+
 </body>
 </html>
